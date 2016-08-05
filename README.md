@@ -12,7 +12,7 @@ library        = /root/my-ansible-modules/
 Create directory /root/my-ansible-modules/
 Create module file /root/my-ansible-modules/download_file.py
 
-```
+```python
 #!/usr/bin/python
 # Date: 2016-08-05
 
@@ -86,13 +86,13 @@ if __name__ == '__main__':
 ```
 
 ## Make file executable:
-```
+```bash
 chmod +x /root/my-ansible-modules/download_file.py
 ```
 
 ## Create playbook file /root/play.yml
 
-```
+```yaml
 ---
 - hosts: app-servers
   tasks:
@@ -109,7 +109,7 @@ chmod +x /root/my-ansible-modules/download_file.py
 ```
 
 ## Run playbook:
-```
+```bash
 ansible-playbook -i my-inventory play.yml
 ```
 
