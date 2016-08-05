@@ -1,0 +1,7 @@
+---
+- hosts: app-servers
+  tasks:
+    - name: Download file
+      download_file: url='https://www.kernel.org/doc/linux/README' dest='/tmp/README' overwrite=yes
+      register: result
+    - debug: var=result
